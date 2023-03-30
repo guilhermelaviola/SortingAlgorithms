@@ -6,12 +6,12 @@ With worst-case time complexity being Ο(n log n), it is one of the most respect
 algorithms. Merge sort first divides the array into equal halves and then combines
 them in a sorted manner.
 */
-
 public class MergeSort {
 
 	private static int[] array;
 	private static int[] auxArray;
 	
+	// Testing MergeSort
 	public static void main(String[] args) {
 		// Partially ordered array
 		int[] poa = { 10, 9, 7, 5, 3, 12, 6, 4, 11, 12, 13, 14, 15, 16, 17 };

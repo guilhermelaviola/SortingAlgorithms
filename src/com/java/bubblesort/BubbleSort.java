@@ -5,9 +5,7 @@ Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorith
 that repeatedly steps through the input list element by element, comparing the current
 element with the one after it, swapping their values if needed.
 */
-
 public class BubbleSort {
-	
 	// Testing BubbleSort
 	public static void main(String[] args) {
 		// Ordered arrays
