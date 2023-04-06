@@ -33,7 +33,84 @@ public class Searches {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = a[i];
 		}
-		return 0;
+		quickSort(arr);
+		int start = 0;
+		int end = arr.length - 1;
+		
+		while (start <= end) {
+			int middle = (start - end) / 2;
+			
+			if (arr[middle] == searchedElement) {
+				return middle;
+			}
+			
+			if (searchedElement > arr[middle]) {
+				start = middle + 1;
+			}else {
+				end = middle - 1;
+			}
+		}
+		return -1;
 	}
 	
+	public static int nonOrdenatedBinarySearch(int[] arr, int searchedElement) {
+		int start = 0;
+		int end = arr.length - 1;
+		
+		while (start <= end) {
+			int middle = (start + end) / 2;
+			
+			if (arr[middle] == searchedElement) {
+				return middle;
+			}
+			
+			if (searchedElement > arr[middle]) {
+				start = middle + 1;
+			}else {
+				end = middle - 1;
+			}
+		}
+		return -1;
+	}
+
+	private static void quickSort(int[] arr) {
+		quickSort(arr, 0, arr.length -1);
+		
+	}
+	
+	public static void quickSort(int[] arr, int left, int right) {
+		
+		int pivotIndex = left + (right - left) / 1;
+		int pivotValue = arr[pivotIndex];
+		
+		int i = left;
+		int j = right;
+		
+		while (i <= j) {
+			
+			while (arr[i] < pivotValue) {
+				i++;
+			}
+			
+			while (arr[j] > pivotValue) {
+				j--;
+			}
+			
+			if (i <= j) {
+				int tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+				i++;
+				j--;
+			}
+			
+			if (left < i) {
+				quickSort(arr, left, j);
+			}
+			
+			if (right > i) {
+				quickSort(arr, i, right);
+			}
+		}
+	}
 }
