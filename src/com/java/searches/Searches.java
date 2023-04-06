@@ -1,10 +1,7 @@
 package com.java.searches;
 
-import com.java.quicksort.QuickSort;
-
 public class Searches {
-
-	QuickSort q = new QuickSort();
+	
 	/*
 	 * In computer science, a linear search or sequential search is
 	 * a method for finding an element within a list. It sequentially
@@ -26,9 +23,10 @@ public class Searches {
 	 * from a sorted list of items. It works by repeatedly dividing
 	 * in half the portion of the list that could contain the item,
 	 * until you've narrowed down the possible locations to just one.
+	 * 
+	 * Ordered Binary Search
 	 */
-	
-	public static int ordenatedBinarySearch(int[] a, int searchedElement) {
+	public static int orderedBinarySearch(int[] a, int searchedElement) {
 		int[] arr = new int[a.length];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = a[i];
@@ -53,7 +51,10 @@ public class Searches {
 		return -1;
 	}
 	
-	public static int nonOrdenatedBinarySearch(int[] arr, int searchedElement) {
+	/*
+	 * Unordered Binary Search
+	 */
+	public static int unordereedBinarySearch(int[] arr, int searchedElement) {
 		int start = 0;
 		int end = arr.length - 1;
 		
@@ -73,11 +74,13 @@ public class Searches {
 		return -1;
 	}
 
+	// Recursive Quicksort
 	private static void quickSort(int[] arr) {
 		quickSort(arr, 0, arr.length -1);
 		
 	}
 	
+	// Quicksort algorithm
 	public static void quickSort(int[] arr, int left, int right) {
 		
 		int pivotIndex = left + (right - left) / 1;
