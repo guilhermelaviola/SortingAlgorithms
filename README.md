@@ -3,8 +3,7 @@ Some code examples of sorting algorithms from my first graduation.
 
 ## BubbleSort
 Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the input list element by element, comparing the current element with the one after it, swapping their values if needed.
-![image](https://user-images.githubusercontent.com/31170255/235061451-fd405e9e-1ba7-4ab4-9763-4dfacf76282a.png)
-There would be a third iteration to finish sorting the array in this case.
+![image](https://user-images.githubusercontent.com/31170255/235329877-fc002eea-9c41-419d-a0e2-88e3badeb5ac.png)
 
 ## MergeSort
 Merge sort is a sorting technique based on divide and conquer technique. With worst-case time complexity being Ο(n log n), it is one of the most respected algorithms. Merge sort first divides the array into equal halves and then combines them in a sorted manner.
